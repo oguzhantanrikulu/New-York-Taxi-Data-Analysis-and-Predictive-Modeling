@@ -12,6 +12,12 @@ And the data files are mentioned in the installing data part below.
 
 Also this project is on kaggle page: [KAGGLE PAGE OF THE NOTEBOOK](https://www.kaggle.com/oguzhantanrikulu/notebook81c11a26b9)
 
+Github page of the project [github.com/oguzhantanrikulu/NYtaxi](https://github.com/oguzhantanrikulu/NYtaxi)
+
+This project is also uploaded to Amazon Web Service in SageMaker Studio and also as Notebook instances but due to free acoount's "ml.t2.medium" limits, It could not be ensured that the code reads data. Still;
+the password: ```2Py@W74.<Wx-2xp``` and the username: ```oguzhantanrikulu``` 
+[AWS Signin Link](https://console.aws.amazon.com/console/home?nc2=h_ct&src=header-signin)
+
 ### Prerequisites
 
 This project needs minimum python 2.6 and the environment was Jupyter Notebook.
