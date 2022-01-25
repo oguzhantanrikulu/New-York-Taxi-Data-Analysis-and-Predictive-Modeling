@@ -1,6 +1,6 @@
 # NYtaxi
-# Technical test in Data Science
-# Candidate: Oğuzhan Tanrıkulu
+# Data Science Tasks with NY Taxi Data
+# By Oğuzhan Tanrıkulu
 
 The goal is to handle various data analysis processes and building data pipelines with New York Taxi Rides data.
 
