@@ -1,43 +1,83 @@
-# NYtaxi
-# Data Science Tasks with NY Taxi Data
-# By Oğuzhan Tanrıkulu
+# README for NYC Taxi Data Analysis
 
-The goal is to handle various data analysis processes and building data pipelines with New York Taxi Rides data.
+---
 
-Main notebook file is [FinalCode_v2.0.ipynb](https://github.com/oguzhantanrikulu/NYtaxi/blob/master/FinalCode_v2.0.ipynb)
+## Overview
 
-Python source code file is  [FinalCode_v2.0.py](https://github.com/oguzhantanrikulu/NYtaxi/blob/master/FinalCode_v2.0.py)
+This project provides a comprehensive analysis of the New York City taxi data over the years 2009-2012. It aims to handle various data analysis processes and build data pipelines for the New York Taxi Rides data. The main insights include the average distance traveled, top-performing vendors, monthly ride distributions, and more.
 
-And the data files are mentioned in the installing data part below.
+## Table of Contents
+1. [Data Loading](#data-loading)
+2. [Data Preparation](#data-preparation)
+3. [Questions and Answers](#questions-and-answers)
+4. [Bonus Insights](#bonus-insights)
+5. [Assumptions and Validations](#assumptions-and-validations)
+6. [Prerequisites](#prerequisites)
+7. [Installing Data](#installing-data)
 
-Also this project is on kaggle page: [KAGGLE PAGE OF THE NOTEBOOK](https://www.kaggle.com/oguzhantanrikulu/notebook81c11a26b9)
+## Data Loading
 
-Github page of the project [github.com/oguzhantanrikulu/NYtaxi](https://github.com/oguzhantanrikulu/NYtaxi)
+The primary datasets for this analysis are:
+1. NYC Taxi trip data for the years 2009 to 2012.
+2. Vendor lookup data.
+3. Payment lookup data.
 
-This project is also uploaded to Amazon Web Service in SageMaker Studio and also as Notebook instances 
+The trip data is loaded from JSON files, while the vendor and payment lookup data are loaded from CSV files.
 
-### Prerequisites
+## Data Preparation
 
-This project needs minimum python 2.6 and the environment was Jupyter Notebook.
-Related data and image of the new york map are also required.
+The main steps in the data preparation phase include:
 
-### Installing data
+1. Merging the datasets from various years into a single DataFrame.
+2. Displaying the shape, columns, and data types of the combined dataset.
+3. Merging the main dataset with the payment and vendor lookup data using appropriate keys.
+4. Converting specific columns to appropriate data types for easier analysis.
 
-The data is given bu it also can be downloaded from here: [DATA from kaggle (also map image inclueded)](https://www.kaggle.com/oguzhantanrikulu/nytaxi/download)
+## Questions and Answers
 
-File paths need to be changed with the path of that your data. In the notebook file or source code file these paths are needed to change:
+The following questions were posed and subsequently answered:
 
-```
+1. What is the average distance traveled by trips with a maximum of 2 passengers?
+2. Which are the three biggest vendors based on the total amount of money raised?
+3. Distribution of rides paid with cash on a monthly basis over the years.
+4. Time series chart showing the number of tips each day for the last 3 months of 2012.
+
+## Bonus Insights
+
+1. Average trip time on Saturdays and Sundays.
+2. Analysis to find and prove seasonality in the data.
+3. Latitude and longitude map views of pickups and drop-offs in the year 2010.
+
+## Assumptions and Validations
+
+A primary assumption was validated through analysis:
+
+- There are fewer rides at night than during the day. This assumption was proven correct with the help of a visual graph showing the number of rides during the day vs. during the night.
+
+## Prerequisites
+
+1. Python (minimum version 2.6).
+2. Environment: Jupyter Notebook.
+3. Libraries: pandas, numpy, matplotlib, seaborn, datetime, scipy.stats, sklearn.
+4. Data and image of the New York map.
+
+## Installing Data
+
+The data can be downloaded from the following Kaggle link: [DATA from Kaggle (including map image)](https://www.kaggle.com/oguzhantanrikulu/nytaxi/download)
+
+Please ensure you update the file paths to reflect the location of your data. For instance, the paths in the following code need to be adjusted:
+
+```python
 df1 = pd.read_json("../input/nytaxi/data-sample_data-nyctaxi-trips-2009-json_corrigido.json", lines=True)
-df2 = pd.read_json("../input/nytaxi/data-sample_data-nyctaxi-trips-2010-json_corrigido.json", lines=True)
-df3 = pd.read_json("../input/nytaxi/data-sample_data-nyctaxi-trips-2011-json_corrigido.json", lines=True)
-df4 = pd.read_json("../input/nytaxi/data-sample_data-nyctaxi-trips-2012-json_corrigido.json", lines=True)
-df_v = pd.read_csv("../input/nytaxi/data-vendor_lookup-csv.csv")
+...
 df_p = pd.read_csv("../input/nytaxi/data-payment_lookup-csv.csv", skiprows = 1)
-```
-
-also this path of the map image needs to be changed in the code, with the path of the file that needed to be downloaded:[DOWNLOAD THE MAP IMAGE](doesn't work anymore)
-
-```
 nymap = plt.imread("../input/nytaxi/MapNY.jpg")
 ```
+
+**Additional Resources:**
+- [KAGGLE PAGE OF THE NOTEBOOK](https://www.kaggle.com/oguzhantanrikulu/notebook81c11a26b9)
+- [GitHub Repository](https://github.com/oguzhantanrikulu/NYtaxi)
+
+**Author:** Oğuzhan Tanrıkulu
+
+---
