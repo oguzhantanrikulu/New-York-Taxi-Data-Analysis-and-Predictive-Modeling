@@ -6,6 +6,11 @@
 
 This project provides a comprehensive analysis of the New York City taxi data over the years 2009-2012. It aims to handle various data analysis processes and build data pipelines for the New York Taxi Rides data. The main insights include the average distance traveled, top-performing vendors, monthly ride distributions, and more.
 
+## Main notebook file is [FinalCode_v2.0.ipynb](https://github.com/oguzhantanrikulu/NYtaxi/blob/master/FinalCode_v2.0.ipynb)
+
+Python source code file is  [FinalCode_v2.0.py](https://github.com/oguzhantanrikulu/NYtaxi/blob/master/FinalCode_v2.0.py)
+
+
 ## Table of Contents
 1. [Data Loading](#data-loading)
 2. [Data Preparation](#data-preparation)
@@ -76,7 +81,6 @@ nymap = plt.imread("../input/nytaxi/MapNY.jpg")
 
 **Additional Resources:**
 - [KAGGLE PAGE OF THE NOTEBOOK](https://www.kaggle.com/oguzhantanrikulu/notebook81c11a26b9)
-- [GitHub Repository](https://github.com/oguzhantanrikulu/NYtaxi)
 
 **Author:** Oğuzhan Tanrıkulu
 
